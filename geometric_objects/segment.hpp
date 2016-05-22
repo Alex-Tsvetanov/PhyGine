@@ -1,9 +1,9 @@
-#include <library_structure.hpp>
+#include <geometric_object.hpp>
 #ifndef segment_t
 #define segment_t
 
-template <library_t library>
-class segment : geometric_object
+template <const char* library>
+class segment : public geometric_object<library>
 {
 public:
 	point<library> A, B;

@@ -1,11 +1,11 @@
+#include <geometric_object.hpp>
 #include <point.cpp>
-#include <library_structure.hpp>
 #include <string>
 
 #ifndef triangle_t
 #define triangle_t
-template <library_t library>
-class triangle : geometric_object
+template <const char* library>
+class triangle : public	 geometric_object<library>
 {
 private:
 	point<library> point_1, point_2, point_3;

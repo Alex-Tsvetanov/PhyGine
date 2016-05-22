@@ -1,9 +1,9 @@
-#include <library_structure.hpp>
+#include <geometric_object.hpp>
 #ifndef point_t
 #define point_t
 
-template <library_t library>
-class point : geometric_object
+template <const char* library>
+class point : public geometric_object<library>
 {
 public:
 	double x, y;

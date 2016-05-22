@@ -27,7 +27,7 @@ int main()
 		return 1;
 	}
 
-	std::string imagePath = "hello.bmp";
+	std::string imagePath = "example_images/hello.bmp";
 	SDL_Surface *bmp = SDL_LoadBMP(imagePath.c_str());
 	if (bmp == nullptr){
 		SDL_DestroyRenderer(ren);
