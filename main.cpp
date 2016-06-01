@@ -1,8 +1,11 @@
-#include <point.cpp>
-#include <triangle.cpp>
+#include <point.hpp>
+#include <segment.hpp>
+#include <triangle.hpp>
 #include <math.h>
 #include <iostream>
 #include <SDL2/SDL.h>
+
+const size_t sdl = 42;
 
 int main()
 {
@@ -63,5 +66,7 @@ int main()
 	SDL_DestroyRenderer(ren);
 	SDL_DestroyWindow(win);
 	SDL_Quit();
+	triangle<sdl> tr;
+	segment<sdl> seg;
 	return 0;
 }
