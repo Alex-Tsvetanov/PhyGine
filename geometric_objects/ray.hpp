@@ -18,9 +18,15 @@ public:
 };
 
 template <int lib>
-ray<lib> refflect (ray<lib> r, line<lib> l)
+ray<lib> refflect_on_Xaxis (ray<lib> r, line<lib> l)
 {
-
+	ray<lib> ans;
+	decltype(r.a.x) k = (-r.a.y)/(r.b.y-r.a.y);
+	ans.a.y = 0;
+	ans.a.x = r.a.x + (b.x - a.x) * k;
+	ans.b.y = ans.a.y + (r.a.y - r.b.y);
+	ans.b.x = ans.a.x - (r.a.x - r.b.x);
+	return ans;
 }
 
 #endif
